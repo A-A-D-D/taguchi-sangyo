@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "@marp-team/marp-core": "^4.3.0",
+    "@marp-team/marpit": "^3.2.1",
+    "@mermaid-js/mermaid-cli": "^11.15.0"
+  }
+}

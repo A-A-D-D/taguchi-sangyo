@@ -1,0 +1,204 @@
+/* @theme a4portrait */
+@page {
+  size: A4 portrait;
+  margin: 10mm 12mm;
+}
+
+body,
+.markdown-preview,
+.markdown-preview.markdown-preview {
+  font-size: 11.5pt !important;
+  line-height: 1.35 !important;
+}
+
+body h1,
+.markdown-preview h1 {
+  font-size: 18px !important;
+  line-height: 1.2 !important;
+  margin: 0 0 0.45em !important;
+}
+
+body h2,
+.markdown-preview h2 {
+  font-size: 16px !important;
+  line-height: 1.25 !important;
+  margin: 0.9em 0 0.4em !important;
+}
+
+body h3,
+.markdown-preview h3 {
+  font-size: 14px !important;
+  line-height: 1.3 !important;
+  margin: 0.8em 0 0.35em !important;
+}
+
+body h4,
+.markdown-preview h4 {
+  font-size: 13.5px !important;
+  line-height: 1.3 !important;
+  margin: 0.7em 0 0.3em !important;
+}
+
+body h5,
+.markdown-preview h5 {
+  font-size: 12px !important;
+  line-height: 1.3 !important;
+  margin: 0.6em 0 0.25em !important;
+}
+
+body h6,
+.markdown-preview h6 {
+  font-size: 11px !important;
+  line-height: 1.3 !important;
+  margin: 0.5em 0 0.2em !important;
+}
+
+p,
+ul,
+ol,
+table {
+  margin-top: 0.45em;
+  margin-bottom: 0.45em;
+}
+
+table {
+  font-size: 11px;
+}
+
+pre,
+code {
+  font-size: 10px;
+}
+
+.effect-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10mm;
+  margin-top: 0.8em;
+}
+
+.effect-card {
+  break-inside: avoid;
+}
+
+.effect-card h3 {
+  margin-top: 0 !important;
+}
+
+@media print {
+  body,
+  .markdown-preview {
+    font-size: 11.5pt !important;
+    line-height: 1.5 !important;
+  }
+
+  .page-break {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+
+  table,
+  pre,
+  blockquote,
+  img {
+    break-inside: avoid;
+  }
+}
+
+/* Proposal layout */
+section {
+  width: 210mm;
+  height: 297mm;
+
+  padding: 18mm;
+  box-sizing: border-box;
+
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+
+  font-size: 14px;
+  line-height: 1.6;
+
+  color: #222;
+  background: #fff;
+}
+
+/* Main title */
+h1 {
+  font-size: 28px;
+  color: #1f3c5a;
+
+  border-bottom: 3px solid #1f3c5a;
+
+  padding-bottom: 8px;
+  margin-bottom: 18px;
+}
+
+/* Section title */
+h2 {
+  font-size: 22px;
+  color: #1f3c5a;
+
+  border-left: 6px solid #c97832;
+
+  padding-left: 12px;
+
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+/* Sub section */
+h3 {
+  font-size: 18px;
+  color: #4e5d6c;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+table th {
+  background: #f0f3f7;
+  color: #1f3c5a;
+
+  border-bottom: 2px solid #1f3c5a;
+}
+
+table th,
+table td {
+  border: 1px solid #d7dce2;
+  padding: 8px;
+}
+
+/* Code blocks */
+pre,
+code {
+  font-size: 11px;
+}
+
+/* Horizontal rule */
+hr {
+  border: none;
+  border-top: 1px solid #d7dce2;
+}
+
+/* Accent emphasis */
+strong {
+  color: #c97832;
+}
+
+.db-er .mermaid {
+  transform: scale(0.82);
+}
+
+.db-er svg {
+  max-height: 240mm !important;
+}

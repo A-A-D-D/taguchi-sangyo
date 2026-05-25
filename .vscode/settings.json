@@ -1,0 +1,6 @@
+{
+  "markdown.styles": [
+    "docs/css/a4portrait.css"
+  ],
+  "markdown.preview.breaks": true
+}
