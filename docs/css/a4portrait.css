@@ -112,7 +112,9 @@ code {
 }
 
 /* Proposal layout */
-section {
+section,
+.markdown-preview,
+.markdown-preview.markdown-preview {
   width: 210mm;
   height: 297mm;
 
@@ -129,53 +131,60 @@ section {
 }
 
 /* Main title */
-h1 {
-  font-size: 28px;
-  color: #1f3c5a;
+section h1,
+.markdown-preview h1 {
+  font-size: 28px !important;
+  color: #1f3c5a !important;
 
-  border-bottom: 3px solid #1f3c5a;
+  border-bottom: 3px solid #1f3c5a !important;
 
-  padding-bottom: 8px;
-  margin-bottom: 18px;
+  padding-bottom: 8px !important;
+  margin-bottom: 18px !important;
 }
 
 /* Section title */
-h2 {
-  font-size: 22px;
-  color: #1f3c5a;
+section h2,
+.markdown-preview h2 {
+  font-size: 22px !important;
+  color: #1f3c5a !important;
 
-  border-left: 6px solid #c97832;
+  border-left: 6px solid #c97832 !important;
 
-  padding-left: 12px;
+  padding-left: 12px !important;
 
-  margin-top: 1.2em;
-  margin-bottom: 0.5em;
+  margin-top: 1.2em !important;
+  margin-bottom: 0.5em !important;
 }
 
 /* Sub section */
-h3 {
-  font-size: 18px;
-  color: #4e5d6c;
+section h3,
+.markdown-preview h3 {
+  font-size: 18px !important;
+  color: #4e5d6c !important;
 }
 
 /* Table styling */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 12px;
+section table,
+.markdown-preview table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  font-size: 12px !important;
 }
 
-table th {
-  background: #f0f3f7;
-  color: #1f3c5a;
+section table th,
+.markdown-preview table th {
+  background: #f0f3f7 !important;
+  color: #1f3c5a !important;
 
-  border-bottom: 2px solid #1f3c5a;
+  border-bottom: 2px solid #1f3c5a !important;
 }
 
-table th,
-table td {
-  border: 1px solid #d7dce2;
-  padding: 8px;
+section table th,
+section table td,
+.markdown-preview table th,
+.markdown-preview table td {
+  border: 1px solid #d7dce2 !important;
+  padding: 8px !important;
 }
 
 /* Code blocks */
@@ -185,14 +194,16 @@ code {
 }
 
 /* Horizontal rule */
-hr {
-  border: none;
-  border-top: 1px solid #d7dce2;
+section hr,
+.markdown-preview hr {
+  border: none !important;
+  border-top: 1px solid #d7dce2 !important;
 }
 
 /* Accent emphasis */
-strong {
-  color: #c97832;
+section strong,
+.markdown-preview strong {
+  color: #c97832 !important;
 }
 
 .db-er .mermaid {
