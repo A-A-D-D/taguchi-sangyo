@@ -1,6 +1,7 @@
 {
-  "markdown.styles": [
-    "docs/css/a4portrait.css"
-  ],
-  "markdown.preview.breaks": true
+  "markdown-preview-enhanced.previewTheme": "github-light.css",
+
+  "markdown-preview-enhanced.styleFile": [
+    "/Users/agent/Documents/dev/laravel/taguchi-sangyo/docs/css/a4portrait.css"
+  ]
 }

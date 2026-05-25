@@ -1,6 +1,4 @@
-<style>
-@import "../css/a4portrait.css";
-</style>
+@import "../css/a4portrait.css"
 
 # 田口産業 社内システム提案書
 

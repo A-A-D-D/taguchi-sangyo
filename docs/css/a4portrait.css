@@ -1,16 +1,38 @@
 /* @theme a4portrait */
-@page {
-  size: A4 portrait;
-  margin: 10mm 12mm;
+
+.markdown-preview.markdown-preview {
+  padding: 32px 40px !important;
+  width: auto !important;
+  max-width: 960px !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+}
+html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview,
+html
+  body[for="html-export"]:not([data-presentation-mode]):not(
+    [html-show-sidebar-toc]
+  )
+  .markdown-preview {
+  left: auto !important;
+  transform: none !important;
+
+  width: auto !important;
+  max-width: 960px !important;
+
+  margin: 0 auto !important;
+  padding: 32px 40px !important;
+
+  box-sizing: border-box !important;
 }
 
 body,
-.markdown-preview,
-.markdown-preview.markdown-preview {
+.markdown-preview {
   font-size: 11.5pt !important;
   line-height: 1.35 !important;
 }
-
+body.vscode-body {
+  background: #ffeeee !important;
+}
 body h1,
 .markdown-preview h1 {
   font-size: 18px !important;
@@ -60,7 +82,17 @@ table {
   margin-top: 0.45em;
   margin-bottom: 0.45em;
 }
+ul,
+ol {
+  margin-top: 0.3em !important;
+  margin-bottom: 0.3em !important;
+  padding-left: 1.2em !important;
+}
 
+li {
+  margin: 0.15em 0 !important;
+  line-height: 1.2 !important;
+}
 table {
   font-size: 11px;
 }
@@ -86,6 +118,11 @@ code {
 }
 
 @media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm;
+  }
+
   body,
   .markdown-preview {
     font-size: 11.5pt !important;
@@ -184,7 +221,7 @@ section table td,
 .markdown-preview table th,
 .markdown-preview table td {
   border: 1px solid #d7dce2 !important;
-  padding: 8px !important;
+  padding: 6px 7px !important;
 }
 
 /* Code blocks */
