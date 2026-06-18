@@ -1,0 +1,54 @@
+/*******************************************************
+*
+* REGULAR ORDER LIST
+*
+*******************************************************/
+.page-regular-order-list {
+  .regular-order-listSec {
+    .regularOrder__table {
+      border-collapse: collapse;
+      font-size: 12px;
+      width: 1000px;
+
+      @include breakpoint(pc2) {
+        font-size: vwVal(14,1920);
+        width: 100%;
+      }
+
+      &Wrap {
+        overflow-x: scroll;
+
+        @include breakpoint(pc2) {
+          overflow-x: auto;
+        }
+      }
+
+      tr {
+        th,
+        td {
+          border: 1px solid #333;
+          padding: 6px 5px;
+
+          @include breakpoint(pc2) {
+            padding: vwVal(12,1920) vwVal(10,1920);
+          }
+        }
+
+        th {
+          background-color: #ffd3aa;
+          font-weight: 500;
+        }
+
+        td {
+          &.center {
+            text-align: center;
+          }
+
+          .taxin {
+            font-size: calc(10 / 14 * 1em);
+          }
+        }
+      }
+    }
+  }
+}

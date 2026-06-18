@@ -1,0 +1,87 @@
+/*******************************************************
+*
+* SITE ADD
+*
+*******************************************************/
+.page-site-add {
+  .site-addSec {
+    .wpcf7-form {
+      .form__item {
+        flex-wrap: wrap;
+        justify-content: end;
+
+        .input-field {
+          .wpcf7-list-item {
+            &:first-of-type {
+              margin-left: 0;
+            }
+          }
+          
+          & + .input-field {
+            margin-top: vwVal(20,1920);
+          }
+
+          &.postcode {
+            p {
+              align-items: center;
+              display: flex;
+              gap: vwVal(15,1920);
+            }
+
+            button {
+              color: inherit;
+              font-family: inherit;
+              font-size: inherit;
+            }
+          }
+
+          &.restriction_type,
+          &.other_text {
+            display: none;
+          }
+
+          &.restriction_type {
+            .wpcf7-list-item {
+              &.first {
+                display: none;
+              }
+
+              &:nth-of-type(2) {
+                margin-left: 0;
+              }
+            }
+          }
+        }
+      }
+
+      .form__submit {
+        .siteAddBtn {
+          align-items: center;
+          background-color: $color-orange;
+          border: 0;
+          color: #fff;
+          cursor: pointer;
+          display: flex;
+          margin: 0 auto;
+          padding: 12px 34px;
+          transition: ease-in-out 0.3s;
+          width: fit-content;
+
+          @include breakpoint(pc2) {
+            margin: 0 auto;
+            padding: vwVal(23,1920) vwVal(68,1920);
+          }
+
+          i {
+            font-size: 1.5em;
+            margin-right: 10px;
+          }
+
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+/*******************************************************
+*
+* MANAGER EDIT
+*
+*******************************************************/
+.page-manager-edit {
+  .manager-editSec {
+    .wpcf7 {
+      form {
+        &.aborted {
+          .wpcf7-response-output {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

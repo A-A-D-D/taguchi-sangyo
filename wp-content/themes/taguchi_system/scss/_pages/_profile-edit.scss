@@ -1,0 +1,189 @@
+/*******************************************************
+*
+* PROFILE EDIT
+*
+*******************************************************/
+.page-profile-edit {
+  .profile-editSec {
+    .form__wrap {
+      width: 100%;
+      
+      @include breakpoint(pc2) {
+        width: vwVal(800,1920);
+      }
+
+
+      #wpmem_reg {
+        font-family: inherit;
+        font-size: inherit;
+
+        fieldset {
+          align-items: center;
+          display: flex;
+          flex-wrap: wrap;
+
+          & > label {
+            //text-align: right;
+
+            @include breakpoint(pc2) {
+              margin-right: calc(40 / 800 * 100%);
+            }
+          }
+        }
+
+        legend {
+          display: none;
+        }
+
+        label {
+          align-items: center;
+          margin-bottom: 25px;
+          width: 100%;
+
+          @include breakpoint(pc2) {
+            margin-bottom: vwVal(50,1920);
+            width: calc(210 / 800 * 100%);
+          }
+
+          &[for=gyoshu],
+          &[for=last_name],
+          &[for=billing_postcode],
+          &[for=mobile],
+          &[for=user_email],
+          &[for=password] {
+            margin-bottom: 15px;
+
+            @include breakpoint(pc2) {
+              margin-bottom: vwVal(15,1920);
+            }
+
+            & + div {
+              margin-bottom: 15px;
+
+              @include breakpoint(pc2) {
+                margin-bottom: vwVal(15,1920);
+              }
+            }
+          }
+
+          &[for=gyoshu_text],
+          &[for=company_address] {
+            opacity: 0;
+          }
+
+          &[for=billing_postcode] {
+            & + .div_text {
+              align-items: center;
+              display: flex;
+              
+              &::before {
+                content: '〒';
+                margin-right: 10px;
+              }
+
+              input {
+                max-width: 300px;
+              }
+            }
+          }
+        }
+
+        .div_text,
+        .div_radio,
+        .div_select {
+          margin-bottom: 25px;
+          width: 100%;
+          
+          @include breakpoint(pc2) {
+            margin-bottom: vwVal(50,1920);
+            width: calc(550 / 800 * 100%);
+          }
+        }
+
+        .div_radio {
+          br {
+            display: none;
+          }
+
+          label {
+            margin-right: 5%;
+          }
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=password] {
+          border: 1px solid #707070;
+          line-height: 1.5;
+          padding: 9px;
+
+          @include breakpoint(pc2) {
+            padding: vwVal(18,1920);
+          }
+        }
+
+        select {
+          border: 1px solid #707070;
+          line-height: 1.5;
+          margin: 0;
+          padding: 9px;
+
+          @include breakpoint(pc2) {
+            padding: vwVal(18,1920);
+          }
+        }
+
+        .button_div {
+          font-size: 0;
+          margin-top: 30px;
+          padding: 0;
+          text-align: center;
+          width: 100%;
+
+          @include breakpoint(pc2) {
+            margin-top: vwVal(60,1920);
+          }
+
+          & > * {
+            display: none;
+          }
+
+          input[type=submit] {
+            background-color: $color-orange;
+            border: 0;
+            cursor: pointer;
+            color: #fff;
+            display: inline-block;
+            font-size: 14px;
+            line-height: calc(24 / 16);
+            padding: 12px 0;
+            transition: 0.3s ease-in-out;
+            width: 200px;
+
+            @include breakpoint(pc2) {
+              font-size: vwVal(16,1920);
+              padding: vwVal(23,1920) 0;
+              width: vwVal(300,1920);
+            }
+
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+
+        #gyoshu_text {
+          max-width: 250px;
+        }
+
+        .req {
+          font-size: inherit;
+        }
+
+        .req-text {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+// Colors
+$color-black: #333;
+$color-orange: #ff9f47;
+//$color-green: #74B332;
+$color-green: #28CF7E;
+$color-gray: #BAA89B;
+
+
+
+//old
+
+
+
+
+$color-red: #E82A41;
+$color-navy: #203964;
+
+$color-blue: #183E77;
+$color-skyblue: #E8F4FF;
+
+$color-white: #fff;
+
+$color-brown: #806000;
+$color-brown2: #725A30;
+$color-lightBrown: #D3C4BB;
+$color-softOrange: #fed997;
+$color-lightOrange: #fdf6ef;
+$color-darkGray: #999898;
+
+$color-brown-alpha: rgba(114, 90, 48, 0.1);
+$color-white-alpha: rgba(255, 255, 255, 0.85);
+$color-green-alpha: rgba(111, 177, 106, 0.1);
+$color-red-alpha: rgba(177, 106, 109, 0.07);
+
+
+
+
+
+$notosans: 'Noto Sans JP', sans-serif;
+
+//old
+$mplus-rounded: 'M PLUS Rounded 1c', sans-serif;
+$ubuntu: 'Ubuntu', sans-serif;
+$merriweather: 'Merriweather', serif;
+$notosans: 'Noto Sans JP', sans-serif;
+
+$yumincho: 'Yu Mincho', serif;
+$yugothic: 'Yu Gothic', sans-serif;
+$robotomono: 'Roboto Mono', monospace;
+$zenmarugo: 'Zen Maru Gothic', sans-serif;
+
+$bizudpgo: 'BIZ UDPGothic', sans-serif;
+
+$barlow: 'Barlow', sans-serif;
+$zenkakugo: 'Zen Kaku Gothic New', sans-serif;
+$senobi: 'Senobi Gothic', sans-serif;
+$teko: 'Teko', sans-serif;
+
+$font-primary: $notosans;
+$font-secondary: $yumincho;
+$font-accent: $ubuntu;
+
+// Min width
+$breakpoint-sp: 576px;
+$breakpoint-pc: 768px;
+$breakpoint-pc2: 992px;
+$breakpoint-pc3: 1200px;
+$breakpoint-pc4: 1280px;
+$breakpoint-pc5: 1440px;

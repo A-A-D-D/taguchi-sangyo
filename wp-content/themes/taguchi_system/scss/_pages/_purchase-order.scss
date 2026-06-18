@@ -1,0 +1,288 @@
+/*******************************************************
+*
+* PURCHASE ORDER
+*
+*******************************************************/
+.page-purchase-order {
+  .purchase-orderSec {
+    padding-top: 0;
+
+    .wpcf7-form {
+      width: 100%;
+
+      #cf7-input-area {
+        .row {
+          display: flex;
+          gap: 5%;
+  
+          .left {
+            width: 50%;
+          }
+  
+          .right {
+            width: 45%;
+          }
+        }
+  
+        .messageWrap {
+          margin-top: 40px;
+  
+          @include breakpoint(pc2) {
+            margin-top: vwVal(80,1920);
+          }
+  
+          .form__item {
+            display: block;
+  
+            .head {
+              width: 100%;
+            }
+  
+            .input-field {
+              margin-top: 8px;
+              width: 100%;
+  
+              @include breakpoint(pc2) {
+                margin-top: vwVal(15,1920);
+              }
+              
+              textarea {
+                height: 400px;
+  
+                @include breakpoint(pc2) {
+                  height: vwVal(700,1920);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      #cf7-confirm-area {
+        .confirm-wrap {
+          border: 1px solid #333;
+          padding: 30px 50px 50px;
+  
+          @include breakpoint(pc2) {
+            padding: vwVal(60,1920) vwVal(100,1920) vwVal(100,1920);
+          }
+        }
+
+        .request-date {
+          border-bottom: 1px solid #333;
+          display: inline-block;
+          padding: 0 5px;
+
+          @include breakpoint(pc2) {
+            padding: 0 vwVal(10,1920);
+          }
+
+          span {
+            font-size: calc(18 / 16 * 1em);
+            margin-right: 2em;
+          }
+        }
+        
+        .confirm-info {
+          border-left: 1px solid #333;
+          border-top: 1px solid #333;
+          margin-top: 20px;
+
+          @include breakpoint(pc2) {
+            margin-top: vwVal(40,1920);
+          }
+
+          .row {
+            display: flex;
+
+            .left {
+              flex: 1;
+
+              dl {
+                height: 50%;
+              }
+
+              dt {
+                width: 125px;
+
+                @include breakpoint(pc2) {
+                  width: vwVal(250,1920);
+                }
+              }
+            }
+
+            .right {
+              dl {
+                height: 100%;
+              }
+
+              dd {
+                width: 115px;
+
+                @include breakpoint(pc2) {
+                  width: vwVal(230,1920);
+                }
+
+                span {
+                  font-size: calc(14 / 16 * 1em);
+                }
+              }
+            }
+          }
+
+          dl {
+            display: flex;
+            width: 100%;
+          }
+
+          dt,
+          dd {
+            align-items: center;
+            border-bottom: 1px solid #333;
+            border-right: 1px solid #333;
+            display: flex;
+            font-size: 16px;
+            padding: 8px 15px;
+
+            @include breakpoint(pc2) {
+              font-size: vwVal(18,1920);
+              padding: vwVal(17,1920) vwVal(30,1920);
+            }
+          }
+          
+          dt {
+            background-color: #aaa;
+            width: 75px;
+
+            @include breakpoint(pc2) {
+              width: vwVal(150,1920);
+            }
+          }
+
+          dd {
+            flex: 1;
+          }
+        }
+
+        .confirm-message {
+          border-left: 1px solid #333;
+          border-top: 1px solid #333;
+          margin-top: 18px;
+          width: 100%;
+
+          @include breakpoint(pc2) {
+            margin-top: vwVal(35,1920);
+          }
+
+          & > div {
+            border-bottom: 1px solid #333;
+            border-right: 1px solid #333;
+          }
+
+          .message-head {
+            background-color: #aaa;
+            padding: 6px;
+            text-align: center;
+
+            @include breakpoint(pc2) {
+              padding: vwVal(12,1920);
+            }
+          }
+
+          .message-content {
+            min-height: 200px;
+            padding: 18px;
+
+            @include breakpoint(pc2) {
+              min-height: vwVal(400,1920);
+              padding: vwVal(35,1920);
+            }
+          }
+        }
+
+        .confirm-site {
+          border-left: 1px solid #333;
+          border-top: 1px solid #333;
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 12px;
+
+          @include breakpoint(pc2) {
+            margin-top: vwVal(25,1920);
+          }
+
+          dl {
+            display: flex;
+            width: 50%;
+          }
+
+          dt,
+          dd {
+            align-items: center;
+            border-bottom: 1px solid #333;
+            border-right: 1px solid #333;
+            display: flex;
+          }
+
+          dt {
+            background-color: #aaa;
+            font-size: 16px;
+            padding: 8px 15px;
+            width: 100%;
+
+            @include breakpoint(pc2) {
+              font-size: vwVal(18,1920);
+              padding: vwVal(17,1920) vwVal(30,1920);
+              width: vwVal(200,1920);
+            }
+          }
+
+          dd {
+            flex: 1;
+            padding: 8px 15px;
+
+            @include breakpoint(pc2) {
+              padding: vwVal(17,1920) vwVal(30,1920);
+            }
+          }
+        }
+
+        .confirm-submit {
+          margin-top: 50px;
+
+          @include breakpoint(pc2) {
+            margin-top: vwVal(100,1920);
+          }
+
+          p {
+            display: flex;
+            gap: 10%;
+            justify-content: center;
+          }
+
+          button {
+            background-color: $color-orange;
+            border: 0;
+            color: #fff;
+            cursor: pointer;
+            font-weight: 500;
+            padding: 12px 59px;
+            transition: 0.3s ease-in-out;
+            
+            @include breakpoint(pc2) {
+              padding: vwVal(23,1920) vwVal(118,1920);
+            }
+
+            &:hover {
+              opacity: 0.7;
+            }
+
+            &#back-button {
+              background-color: #aaa;
+            }
+          }
+        }
+      }
+    }
+  }
+}

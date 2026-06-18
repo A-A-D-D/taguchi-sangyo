@@ -1,0 +1,119 @@
+/*******************************************************
+*
+* PRINT : COMMON
+*
+*******************************************************/
+body {
+  -webkit-print-color-adjust: exact;
+  min-width: 800px;
+}
+
+.main {
+  padding-top: 0;
+}
+
+.slick-track,
+.slick-slide {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.slick-track {
+  transform: translate3d(0, 0, 0) !important;
+}
+
+.slick-initialized .slick-slide {
+  display: none !important;
+}
+
+.slick-initialized .slick-slide:nth-child(2) {
+  display: block !important;
+  left: 0 !important;
+  opacity: 1 !important;
+}
+
+/*******************************************************
+*
+* PRINT : HEADER
+*
+*******************************************************/
+.header {
+  position: static;
+}
+
+/*******************************************************
+*
+* PRINT : TOP
+*
+*******************************************************/
+/* .topMV__item {
+  height: 55vw;
+}
+
+.topMV .slick-dots {
+  bottom: 8vw;
+}
+
+.topProjects .row .img {
+  width: 55%;
+}
+
+.topProjects .row .head .num img.animation-js {
+  transform: translateY(0);
+}
+
+.topProjects .row .head .ttl__wrap.animation-js {
+  transform: translateY(0);  
+}
+
+.topProjects .row .img.animation-js {
+  transform: translateX(0);
+
+  &::before {
+    display: none;
+  }
+}
+
+.topProjects .row .dtl .box.animation-js {
+  transform: translateX(0);
+
+  &::before {
+    display: none;
+  }
+}
+
+.topInformation .list {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.topInformation .btn a {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.topRecruit figure .wrap.animation-js {
+  transform: translateX(0);
+
+  &::before {
+    display: none;
+  }
+} */
+
+/*******************************************************
+*
+* PRINT : 150TH
+*
+*******************************************************/
+/* .page-150th .sp-movie .movie {
+  width: 100%;
+} */
+
+/*******************************************************
+*
+* PRINT : DROPDOWN MENU
+*
+*******************************************************/
+/* .dropdown__menu {
+  display: none;
+} */

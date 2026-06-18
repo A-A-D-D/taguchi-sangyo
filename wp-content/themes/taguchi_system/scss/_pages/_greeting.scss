@@ -1,0 +1,44 @@
+/*******************************************************
+*
+* GREETING
+*
+*******************************************************/
+.page-greeting {
+  .greetingSec {
+    padding: 60px 0 250px;
+    position: relative;
+
+    @include breakpoint(pc2) {
+      padding: vwVal(60,1920) 0 vwVal(550,1920);
+    }
+
+    .txt {
+      font-size: 16px;
+      line-height: calculate_lh(18,48);
+
+      @include breakpoint(pc2) {
+        font-size: vwVal(18,1920);
+      }
+
+      &__wrap {
+        margin: 0 auto;
+        max-width: 667px;
+        width: 100%;
+
+        @include breakpoint(pc2) {
+          width: vwVal(667,1920);
+        }
+      }
+    }
+
+    .bg {
+      bottom: 0;
+      height: auto;
+      left: 0;
+      opacity: 0.7;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+}

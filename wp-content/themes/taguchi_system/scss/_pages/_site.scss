@@ -1,0 +1,105 @@
+/*******************************************************
+*
+* SITE
+*
+*******************************************************/
+.page-site {
+  .siteSec {
+    .siteAddBtn {
+      align-items: center;
+      background-color: $color-orange;
+      color: #fff;
+      display: flex;
+      margin: 30px auto 0;
+      padding: 12px 34px;
+      width: fit-content;
+
+      @include breakpoint(pc2) {
+        margin: vwVal(60,1920) auto 0;
+        padding: vwVal(23,1920) vwVal(68,1920);
+      }
+
+      i {
+        font-size: 1.5em;
+        margin-right: 10px;
+      }
+    }
+
+    .site__table {
+      dl {
+        display: flex;
+
+        &.table__head {
+          background-color: #ffd3aa;
+
+          dt,
+          dd {
+            border-top: 1px solid $color-black;
+            justify-content: center;
+          }
+        }
+
+        .site_name {
+          width: 35%;
+        }
+
+        .address {
+          width: 40%;
+        }
+
+        .contact {
+          width: 20%;
+        }
+
+        .vehicle_restrictions {
+          width: 20%;
+        }
+
+        .delete {
+          min-width: 90px;
+          justify-content: center;
+          width: 10%;
+          
+          button {
+            background-color: #fff;
+            border: 1px solid $color-black;
+            cursor: pointer;
+            font-size: 12px;
+            padding: 2px 6px;
+            transition: 0.3s ease-in-out;
+
+            @include breakpoint(pc2) {
+              font-size: vwVal(13,1920);
+              padding: vwVal(4,1920) vwVal(12,1920);
+            }
+
+            &:hover {
+              background-color: #333;
+              color: #fff;
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+
+      dt,
+      dd {
+        align-items: center;
+        border-bottom: 1px solid $color-black;
+        border-right: 1px solid $color-black;
+        display: flex;
+        padding: 10px 15px;
+      }
+
+      dt {
+        border-left: 1px solid $color-black;
+      }
+
+      dd {
+
+      }
+
+
+    }
+  }
+}

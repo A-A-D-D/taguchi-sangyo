@@ -1,0 +1,38 @@
+/*******************************************************
+*
+* PRIVACY POLICY
+*
+*******************************************************/
+.page-privacy-policy {
+  .privacySec {
+    padding-top: 0;
+    
+    .cont {
+      line-height: 2;
+
+      h2 {
+        font-size: calc(20 / 16 * 1em);
+        font-weight: 500;
+        margin-top: 15px;
+
+        @include breakpoint(pc2) {
+          margin-top: vwVal(30,1920);
+        }
+
+        & + p,
+        & + ol {
+          margin-top: 5px;
+
+          @include breakpoint(pc2) {
+            margin-top: vwVal(10,1920);
+          }
+        }
+      }
+
+      ol {
+        margin: 0;
+        padding-left: 1.5em;
+      }
+    }
+  }
+}

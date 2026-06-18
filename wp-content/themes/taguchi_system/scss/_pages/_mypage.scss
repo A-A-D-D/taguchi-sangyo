@@ -1,0 +1,46 @@
+/*******************************************************
+*
+* MYPAGE
+*
+*******************************************************/
+.page-mypage {
+  .mypageSec {
+    .txt01 {
+      margin-bottom: vwVal(40,1920);
+      margin-left: auto;
+      margin-right: auto;
+      width: vwVal(1200,1920);
+    }
+
+    .mypage__ttl {
+      border-bottom: 4px solid #dae3f3;
+      font-size: vwVal(28,1920);
+      margin: 0 auto;
+      width: fit-content;
+    }
+
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: vwVal(100,1920);
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: vwVal(40,1920);
+      width: vwVal(1200,1920);
+
+      .item {
+        //width: calc(100% / 3);
+
+        a {
+          font-size: vwVal(20,1920);
+          font-weight: 500;
+
+          i {
+            margin-left: vwVal(10,1920);
+          }
+        }
+      }
+    }
+  }
+}

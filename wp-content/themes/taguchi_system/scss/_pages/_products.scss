@@ -1,0 +1,113 @@
+/*******************************************************
+*
+* PRODUCTS
+*
+*******************************************************/
+.page-products {
+  .categorySec {
+    padding: 0 0 20px;
+
+    @include breakpoint(pc2) {
+      padding: 0 0 vwVal(80,1920);
+    }
+
+    .ttl {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      text-align: center;
+
+      @include breakpoint(pc2) {
+        font-size: vwVal(20,1920);
+        margin-bottom: vwVal(50,1920);
+      }
+    }
+
+    .list {
+      display: grid;
+      gap: 15px;
+      grid-template-columns: 1fr 1fr;
+
+      @include breakpoint(pc2) {
+        gap: vwVal(32,1920);
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .item {
+        a {
+          background-color: #fff;
+          border: 1px solid $color-orange;
+          color: $color-orange;
+          display: block;
+          font-size: 14px;
+          font-weight: 500;
+          padding: 8px 0;
+          text-align: center;
+
+          @include breakpoint(pc2) {
+            font-size: vwVal(20,1920);
+            padding: vwVal(20,1920) 0;
+          }
+
+          &:hover {
+            background-color: $color-orange;
+            color: #fff;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .productsSec {
+    .productBlock {
+      & + .productBlock {
+        margin-top: 100px;
+
+        @include breakpoint(pc2) {
+          margin-top: vwVal(200,1920);
+        }
+      }
+
+      .list {
+        display: grid;
+        gap: 25px;
+        grid-template-columns: 1fr 1fr;
+
+        @include breakpoint(pc2) {
+          gap: vwVal(80,1920) vwVal(50,1920);
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        a {
+          .img__wrap {
+            overflow: hidden;
+            border: 1px solid #707070;
+
+            img {
+              transition: .3s ease-in-out;
+            }
+          }
+  
+          .name {
+            margin-top: 6px;
+
+            @include breakpoint(pc2) {
+              margin-top: vwVal(15,1920);
+            }
+          }
+
+          &:hover {
+            opacity: 1;
+
+            .img__wrap {
+              img {
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

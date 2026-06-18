@@ -1,0 +1,695 @@
+/*******************************************************
+*
+* ABOUT
+*
+*******************************************************/
+.page-about {
+  .aboutSec {
+    margin-bottom: -5px;
+    padding-bottom: 0;
+    padding-top: 30px;
+
+    @include breakpoint(pc2) {
+      margin-bottom: vwVal(-8,1920);
+      margin-top: vwVal(100,1920);
+      padding-top: vwVal(30,1920);
+    }
+
+    .secTtl02 {
+      font-size: 22px;
+      margin-bottom: 25px;
+
+      @include breakpoint(pc2) {
+        font-size: vwVal(32,1920);
+        margin-bottom: vwVal(45,1920);
+      }
+    }
+
+    .txt {
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      line-height: 2;
+
+      @include breakpoint(pc) {
+        text-align: center;
+      }
+
+      @include breakpoint(pc2) {
+        font-size: vwVal(18,1920);
+        line-height: calculate_lh(18,50);
+      }
+    }
+
+    .imageArea {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      margin-top: 40px;
+
+      @include breakpoint(pc2) {
+        display: block;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
+      .img__wrap {
+        height: auto;
+        width: 47%;
+
+        @include breakpoint(pc2) {
+          position: absolute;
+        }
+
+        &:nth-of-type(1) {
+          @include breakpoint(pc2) {
+            height: vwVal(310,1920);
+            left: 0;
+            top: 0;
+            width: vwVal(460,1920);
+          }
+        }
+
+        &:nth-of-type(2) {
+          @include breakpoint(pc2) {
+            bottom: vwVal(160,1920);
+            height: vwVal(264,1920);
+            right: 0;
+            width: vwVal(395,1920);
+          }
+        }
+      }
+    }
+
+    .city {
+      height: 80px;
+
+      @include breakpoint(pc2) {
+        height: auto;
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover;
+
+        @include breakpoint(pc2) {
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .meritSec {
+    background-color: #FFFEF4;
+
+    .secTtl01--en {
+      margin-bottom: 10px;
+  
+      @include breakpoint(pc2) {
+        margin-bottom: vwVal(20,1920);
+      }
+    }
+
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 50px;
+
+      @include breakpoint(pc2) {
+        margin-top: vwVal(100,1920);
+      }
+
+      .item {
+        background-color: #fff;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.16);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px 20px 25px;
+
+        @include breakpoint(pc) {
+          width: 48%;
+        }
+
+        @include breakpoint(pc2) {
+          box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.16);
+          min-height: vwVal(662,1920);
+          padding: vwVal(50,1920) vwVal(57,1920) vwVal(36,1920);
+          width: percentVal(575,1200);
+        }
+
+        & + .item {
+          margin-top: 25px;
+
+          @include breakpoint(pc) {
+            margin-top: 0;
+          }
+        }
+        
+        &:nth-of-type(n+3) {
+          margin-top: 25px;
+
+          @include breakpoint(pc2) {
+            margin-top: vwVal(50,1920);
+          }
+        }
+
+        .num {
+          color: #6DB75A;
+          font-family: $ubuntu;
+          font-size: 20px;
+          line-height: 1;
+          margin: 0 auto;
+          padding: 0 2px;
+          width: fit-content;
+
+          @include breakpoint(pc2) {
+            font-size: vwVal(25,1920);
+            padding: 0 vwVal(2,1920);
+          }
+
+          &.marker {
+            background: linear-gradient(to bottom, transparent 81%, #FFF57B 81%, #FFF57B 100%);
+          }
+
+          span {
+            color: #C1E5B7;
+            font-size: 35px;
+            font-weight: 500;
+            letter-spacing: -0.03em;
+            margin-left: 3px;
+            -webkit-text-stroke: 1px #259424;
+
+            @include breakpoint(pc2) {
+              font-size: vwVal(56,1920);
+              margin-left: vwVal(5,1920);
+            }
+          }
+        }
+
+        .imgArea {
+          align-items: center;
+          display: flex;
+          flex: 1;
+          justify-content: center;
+          margin: 35px 0;
+
+          @include breakpoint(pc2) {
+            margin: 0;
+          }
+
+          img {
+            height: auto;
+          }
+        }
+
+        .ttl {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: calculate_lh(30,42);
+          margin-bottom: 15px;
+          text-align: center;
+
+          @include breakpoint(pc2) {
+            font-size: vwVal(23,1920);
+            margin-bottom: vwVal(35,1920);
+          }
+
+          span {
+            color: #6DB75A;
+            font-size: 22px;
+
+            @include breakpoint(pc2) {
+              font-size: vwVal(30,1920);
+            }
+          }
+        }
+
+        .txt {
+          line-height: 2;
+
+          @include breakpoint(pc) {
+            min-height: 140px;
+          }
+
+          @include breakpoint(pc2) {
+            min-height: vwVal(130,1920);
+          }
+        }
+
+        &:nth-of-type(1) {
+          .imgArea {
+            img {
+              width: 111px;
+
+              @include breakpoint(pc2) {
+                width: vwVal(222.05,1920);
+              }
+            }
+          }
+        }
+
+        &:nth-of-type(2) {
+          .imgArea {
+            img {
+              width: 145px;
+
+              @include breakpoint(pc2) {
+                width: vwVal(289.44,1920);
+              }
+            }
+          }
+        }
+
+        &:nth-of-type(3) {
+          .imgArea {
+            img {
+              width: 82px;
+
+              @include breakpoint(pc2) {
+                width: vwVal(164.77,1920);
+              }
+            }
+          }
+        }
+
+        &:nth-of-type(4) {
+          .imgArea {
+            img {
+              width: 88px;
+
+              @include breakpoint(pc2) {
+                width: vwVal(175.3,1920);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .systemSec {
+    padding-bottom: 0;
+
+    .secTtl01--en {
+      margin-bottom: 10px;
+  
+      @include breakpoint(pc2) {
+        margin-bottom: vwVal(20,1920);
+      }
+    }
+
+    .box {
+      background-color: #F3FFEE;
+      margin-top: 50px;
+      padding: 40px 20px;
+
+      @include breakpoint(pc2) {
+        margin-top: vwVal(100,1920);
+        padding: vwVal(80,1920) vwVal(200,1920);
+      }
+
+      .desc {
+        color: #259424;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        line-height: calculate_lh(28,39);
+        margin-bottom: 30px;
+        text-align: center;
+
+        @include breakpoint(pc2) {
+          font-size: vwVal(18,1920);
+          margin-bottom: vwVal(50,1920);
+        }
+
+        span {
+          font-size: 20px;
+
+          @include breakpoint(pc2) {
+            font-size: vwVal(28,1920);
+          }
+        }
+      }
+
+      .img__wrap {
+        margin-bottom: 30px;
+
+        @include breakpoint(pc2) {
+          margin-bottom: vwVal(50,1920);
+        }
+      }
+
+      .list {
+        .item {
+          align-items: center;
+          display: flex;
+
+          & + .item {
+            margin-top: 30px;
+
+            @include breakpoint(pc2) {
+              margin-top: vwVal(50,1920);
+            }
+          }
+
+          .num {
+            align-items: center;
+            aspect-ratio: 1 / 1;
+            background-color: #137ED5;
+            color: #fff;
+            display: flex;
+            font-size: 20px;
+            font-weight: 500;
+            justify-content: center;
+            margin-right: 10px;
+            width: 40px;
+
+            @include breakpoint(pc2) {
+              font-size: vwVal(25,1920);
+              margin-right: vwVal(17,1920);
+              width: vwVal(50,1920);
+            }
+          }
+
+          .txt {
+            flex: 1;
+            font-size: 16px;
+            letter-spacing: 0.03em;
+            line-height: 1.5;
+
+            @include breakpoint(pc2) {
+              font-size: vwVal(20,1920);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .seriesSec {
+    .secTtl01--en {
+      margin-bottom: 10px;
+  
+      @include breakpoint(pc2) {
+        margin-bottom: vwVal(20,1920);
+      }
+    }
+
+    .type {
+      &__ttl {
+        align-items: center;
+        color: #259424;
+        display: flex;
+        font-size: 19px;
+        font-weight: 500;
+        justify-content: center;
+        letter-spacing: 0.03em;
+        text-align: center;
+
+        @include breakpoint(pc2) {
+          font-size: vwVal(30,1920);
+        }
+
+        img {
+          margin-right: 10px;
+
+          @include breakpoint(pc2) {
+            margin-right: vwVal(21,1920);
+          }
+        }
+      }
+
+      &:nth-of-type(1) {
+        margin-top: 45px;
+
+        @include breakpoint(pc2) {
+          margin-top: vwVal(87,1920);
+        }
+
+        .type__ttl {
+          img {
+            height: auto;
+            width: 35px;
+
+            @include breakpoint(pc2) {
+              width: vwVal(64.72,1920);
+            }
+          }
+        }
+
+        .type__illust {
+          height: auto;
+          right: -17px;
+          top: -116px;
+          width: 100px;
+          z-index: -1;
+
+          @include breakpoint(pc) {
+            width: 130px;
+          }
+
+          @include breakpoint(pc2) {
+            right: vwVal(-333,1920);
+            top: vwVal(-292,1920);
+            width: vwVal(330.585,1920);
+          }
+        }
+      }
+
+      &:nth-of-type(2) {
+        margin-top: 140px;
+
+        @include breakpoint(pc2) {
+          margin-top: vwVal(150,1920);
+        }
+
+        .type__ttl {
+          img {
+            height: auto;
+            width: 35px;
+
+            @include breakpoint(pc2) {
+              width: vwVal(64,1920);
+            }
+          }
+        }
+
+        .type__illust {
+          height: auto;
+          left: -14px;
+          top: -120px;
+          width: 100px;
+          z-index: -1;
+
+          @include breakpoint(pc) {
+            width: 130px;
+          }
+
+          @include breakpoint(pc2) {
+            left: vwVal(-327,1920);
+            top: vwVal(-200,1920);
+            width: vwVal(353.581,1920);
+          }
+        }
+      }
+
+      .box {
+        border: 3px solid #259424;
+        margin-top: 25px;
+        padding: 20px 14px 25px;
+
+        @include breakpoint(pc) {
+          padding: 20px 80px 25px;
+        }
+
+        @include breakpoint(pc2) {
+          align-items: center;
+          display: flex;
+          margin-top: vwVal(50,1920);
+          padding: vwVal(40,1920) vwVal(43,1920) vwVal(40,1920) vwVal(50,1920);
+        }
+
+        .img__wrap {
+          height: auto;
+          margin:  0 auto 20px;
+          max-width: 300px;
+          width: 100%;
+
+          @include breakpoint(pc2) {
+            margin: 0 vwVal(48,1920) 0 0;
+            max-width: none;
+            width: vwVal(300,1920);
+          }
+        }
+
+        .txt__wrap {
+          flex: 1;
+          letter-spacing: 0.03em;
+
+          .name {
+            color: #6DB75A;
+            font-size: 18px;
+            font-weight: 800;
+            line-height: 1.5;
+            margin-bottom: 6px;
+
+            @include breakpoint(pc2) {
+              font-size: vwVal(20,1920);
+              margin-bottom: vwVal(12,1920);
+            }
+          }
+
+          .txt {
+            line-height: 2;
+          }
+
+          .annotation {
+            font-size: 11px;
+            line-height: 2;
+
+            @include breakpoint(pc2) {
+              font-size: vwVal(12,1920);
+            }
+          }
+        }
+      }
+
+      .btn02 {
+        margin: 50px auto 0;
+
+        @include breakpoint(pc2) {
+          margin: vwVal(100,1920) auto 0;
+        }
+      }
+    }
+
+    .option {
+      background-color: #FFFEF0;
+      border: 3px solid #FFC800;
+      border-radius: 25px;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.16);
+      margin: 75px auto 0;
+      padding: 0 20px 30px;
+
+      @include breakpoint(pc2) {
+        border-radius: vwVal(32,1920);
+        box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.16);
+        margin: vwVal(150,1920) auto 0;
+        max-width: vwVal(1000,1920);
+        padding: 0 vwVal(107,1920) vwVal(60,1920);
+      }
+
+      .ttl01 {
+        background: linear-gradient(to bottom, #fff 50%, #FFFEF0 50%, #FFFEF0 100%);
+        color: #FFC800;
+        font-size: 22px;
+        font-weight: 500;
+        letter-spacing: 0.16em;
+        line-height: calculate_lh(26,36);
+        margin: -15px auto 0;
+        text-align: center;
+        width: 230px;
+
+        @include breakpoint(pc2) {
+          background: linear-gradient(to bottom, #fff 60%, #FFFEF0 60%, #FFFEF0 100%);
+          font-size: vwVal(26,1920);
+          margin: vwVal(-21,1920) auto 0;
+          width: vwVal(314,1920);
+        }
+
+        &::before,
+        &::after {
+          background-color: #FFC800;
+          border-radius: 100vw;
+          content: '';
+          height: 28px;
+          position: absolute;
+          top: 0;
+          transform-origin: center;
+          width: 3px;
+
+          @include breakpoint(pc2) {
+            height: vwVal(36,1920);
+          }
+        }
+
+        &::before {
+          left: -1px;
+          transform: rotate(-30deg);
+        }
+
+        &::after {
+          right: -1px;
+          transform: rotate(30deg);
+        }
+      }
+
+      .ttl02 {
+        color: #259424;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        line-height: calculate_lh(16,22);
+        text-align: center;
+      }
+
+      .list {
+        margin: 20px auto 0;
+
+        @include breakpoint(pc2) {
+          display: flex;
+          justify-content: space-between;
+          margin: vwVal(37,1920) auto 0;
+          max-width: 734px;
+        }
+
+        .item {
+          font-size: 16px;
+          margin-top: 2px;
+
+          @include breakpoint(pc2) {
+            font-size: vwVal(18,1920);
+            margin-top: vwVal(23,1920);
+          }
+        }
+      }
+
+      .txt {
+        letter-spacing: 0.03em;
+        line-height: calculate_lh(16,23);
+        margin-top: 20px;
+
+        @include breakpoint(pc2) {
+          margin-top: vwVal(40,1920);
+          text-align: center;
+        }
+      }
+
+      .illust01 {
+        height: auto;
+        left: 0;
+        top: -20px;
+        width: 40px;
+
+        @include breakpoint(pc2) {
+          left: vwVal(21,1920);
+          top: vwVal(-37,1920);
+          width: vwVal(77.475,1920);
+        }
+      }
+
+      .illust02 {
+        bottom: -15px;
+        height: auto;
+        right: 0;
+        width: 40px;
+
+        @include breakpoint(pc2) {
+          bottom: vwVal(-25,1920);
+          width: vwVal(77.705,1920);
+        }
+      }
+    }
+  }
+}

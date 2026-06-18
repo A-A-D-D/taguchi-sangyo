@@ -1,0 +1,856 @@
+/*******************************************************
+*
+* CONTACT
+*
+*******************************************************/
+.page-contact {
+  .contactSec {
+    .contactForm {
+      margin-top: 75px;
+
+      @include breakpoint(pc2) {
+        margin-top: vwVal(150,1920);
+      }
+
+      .tab__cont {
+        .mw_wp_form {
+          letter-spacing: 0.03em;
+          margin-top: 20px;
+          padding: 30px 25px;
+
+          @include breakpoint(pc2) {
+            margin-top: vwVal(40,1920);
+            padding: vwVal(100,1920) vwVal(178,1920);
+          }
+
+          &__item {
+            @include breakpoint(pc2) {
+              display: flex;
+              justify-content: space-between;
+            }
+
+            .head {
+              color: #fff;
+              display: flex;
+              font-size: 16px;
+              font-weight: 500;
+              height: fit-content;
+              justify-content: center;
+              line-height: calculate_lh(18,25);
+              padding: 5px 0 4px;
+              width: 120px;
+
+              @include breakpoint(pc2) {
+                font-size: vwVal(18,1920);
+                padding: vwVal(13,1920) 0 vwVal(12,1920);
+                width: vwVal(200,1920);
+              }
+
+              &--large {
+                width: 155px;
+
+                @include breakpoint(pc2) {
+                  width: vwVal(230,1920);
+                }
+              }
+            }
+
+            .input-field {
+              font-size: 14px;
+              line-height: calculate_lh(15,21);
+              margin-top: 10px;
+              width: 100%;
+
+              @include breakpoint(pc2) {
+                font-size: vwVal(15,1920);
+                margin-top: 0;
+                width: vwVal(514,1920);
+              }
+
+              .lbl {
+                font-size: 16px;
+                margin-right: 5px;
+
+                @include breakpoint(pc2) {
+                  font-size: vwVal(18,1920);
+                  margin-right: vwVal(15,1920);
+                }
+              }
+
+              input[type=text],
+              input[type=email],
+              textarea {
+                background-color: #fff;
+                border: 1px solid;
+                border-radius: 4px;
+                font-family: $notosans;
+                width: 100%;
+
+                @include breakpoint(pc2) {
+                  border-radius: vwVal(5,1920);
+                }
+
+                &::placeholder {
+                  color: #B9B8B8;
+                }
+              }
+
+              input[type=text],
+              input[type=email] {
+                padding: 7px 10px 8px;
+
+                @include breakpoint(pc2) {
+                  padding: calc(vwVal(14,1920) - 1px) vwVal(20,1920) calc(vwVal(15,1920) - 1px);
+                }
+              }
+
+              textarea {
+                letter-spacing: 0.03em;
+                line-height: calculate_lh(15,25);
+                padding: 10px 12px;
+
+                @include breakpoint(pc2) {
+                  padding: vwVal(21,1920) vwVal(25,1920);
+                }
+              }
+
+              & > div {
+                height: fit-content;
+
+                & + div {
+                  margin-top: 10px;
+
+                  @include breakpoint(pc2) {
+                    margin-top: vwVal(20,1920);
+                  }
+                }
+              }
+
+              .mwform-radio-field {
+                margin-left: 0;
+
+                label {
+                  padding-left: 30px;
+                  position: relative;
+          
+                  @include breakpoint(pc2) {
+                    padding-left: vwVal(45,1920);
+                  }
+          
+                  &::before,
+                  &::after {
+                    border-radius: 100vw;
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                  }
+          
+                  &::before {
+                    background-color: #fff;
+                    border: 1px solid #259424;
+                    height: 18px;
+                    left: 0;
+                    width: 18px;
+          
+                    @include breakpoint(pc2) {
+                      height: vwVal(28,1920);
+                      width: vwVal(28,1920);
+                    }
+                  }
+          
+                  &::after {
+                    background-color: #259424;
+                    height: 8px;
+                    left: 6px;
+                    opacity: 0;
+                    transition: 0.3s ease-in-out;
+                    width: 8px;
+          
+                    @include breakpoint(pc2) {
+                      height: vwVal(16,1920);
+                      left: vwVal(7,1920);
+                      width: vwVal(16,1920);
+                    }
+                  }
+          
+                  &:has(:checked)::after {
+                    opacity: 1;
+                  }
+          
+                  input {
+                    display: none;
+                  }
+
+                  span {
+                    line-height: 2;
+                  }
+                }
+              }
+            }
+
+            & + .mw_wp_form__item {
+              margin-top: 25px;
+
+              @include breakpoint(pc2) {
+                margin-top: vwVal(50,1920);
+              }
+            }
+
+            &.name,
+            &.kana {
+              .input-field {
+                display: flex;
+
+                @include breakpoint(pc2) {
+                  justify-content: space-between;
+                }
+                
+                & > div {
+                  align-items: center;
+                  display: flex;
+                  flex: 1;
+                  flex-wrap: wrap;
+                  justify-content: space-between;
+                  
+                  @include breakpoint(pc2) {
+                    max-width: vwVal(232,1920);
+                    //width: vwVal(232,1920);
+                    width: 100%;
+                  }
+
+                  & + div {
+                    margin-top: 0;
+                  }
+
+                  &:nth-of-type(1) {
+                    margin-right: 10px;
+
+                    @include breakpoint(pc2) {
+                      margin-right: 0;
+                    }
+                  }
+                }
+
+                input {
+                  width: 90px;
+
+                  @include breakpoint(pc2) {
+                    width: vwVal(180,1920);
+                  }
+                }
+              }
+            }
+
+            &.address {
+              .input-field {
+                & > div {
+                  &.zip {
+                    //align-items: center;
+                    display: flex;
+
+                    .lbl {
+                      line-height: calculate_lh(16,37);
+                      margin-right: 5px;
+
+                      @include breakpoint(pc2) {
+                        line-height: calculate_lh(18,50);
+                        margin-right: vwVal(34,1920);
+                      }
+                    }
+
+                    .line {
+                      font-size: 16px;
+                      line-height: calculate_lh(16,37);
+                      margin: 0 3px;
+
+                      @include breakpoint(pc2) {
+                        font-size: vwVal(18,1920);
+                        line-height: calculate_lh(18,50);
+                        margin: 0 vwVal(16,1920);
+                      }
+                    }
+
+                    input {
+                      width: 90px;
+
+                      @include breakpoint(pc2) {
+                        width: vwVal(100,1920);
+                      }
+                    }
+                  }
+
+                  &:not(.zip) {
+                    margin-left: 21px;
+
+                    @include breakpoint(pc2) {
+                      margin-left: vwVal(52,1920);
+                    }
+                  }
+                }
+              }
+            }
+
+            &.tel {
+              p {
+                font-size: 13px;
+                margin-top: 5px;
+
+                @include breakpoint(pc2) {
+                  font-size: vwVal(13,1920);
+                  margin-top: vwVal(10,1920);
+                }
+              }
+            }
+
+            &.equipment,
+            &.building_type {
+              .input-field {
+                & > div {
+                  align-items: center;
+                  display: flex;
+                  flex-wrap: wrap;
+                  position: relative;
+
+                  .error {
+                    position: absolute;
+                    top: 100%;
+                  }
+                }
+              }
+
+              .mwform-radio-field {
+                &:nth-of-type(1) {
+                  margin-bottom: 10px;
+                  width: 100%;
+
+                  @include breakpoint(pc2) {
+                    margin-bottom: vwVal(20,1920);
+                    width: vwVal(187,1920);
+                  }
+                }
+
+                &:nth-of-type(2) {
+                  margin-bottom: 10px;
+                  width: 100%;
+                  
+                  @include breakpoint(pc2) {
+                    margin-bottom: vwVal(20,1920);
+                    width: calc(100% - vwVal(187,1920));
+                  }
+                }
+              }
+
+              input[type=text] {
+                flex: 1;
+                margin-left: 10px;
+
+                @include breakpoint(pc2) {
+                  margin-left: vwVal(19,1920);
+                }
+              }
+            }
+
+            &.delivery {
+              .input-field {
+                & > div {
+                  &:nth-of-type(1) {
+                    align-items: center;
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    span {
+                      font-size: 16px;
+                      margin: 0 5px;
+
+                      @include breakpoint(pc2) {
+                        font-size: vwVal(18,1920);
+                        margin: 0 vwVal(15,1920);
+                      }
+
+                      &.error {
+                        display: none;
+                      }
+
+                      &.custom-error {
+                        display: block;
+                        font-size: 93%;
+                        margin: 0;
+                        width: 100%;
+                      }
+                    }
+                  }
+
+                  &:nth-of-type(2) {
+                    .mwform-radio-field {
+                      display: block;
+                      margin-bottom: 10px;
+                      margin-right: 0;
+
+                      @include breakpoint(pc2) {
+                        display: inline;
+                        margin-bottom: 0;
+                        margin-right: vwVal(50,1920);
+                      }
+                    }
+                  }
+                }
+
+                input[name=delivery_year] {
+                  width: 70px;
+
+                  @include breakpoint(pc2) {
+                    width: vwVal(100,1920);
+                  }
+                }
+                
+                input[name=delivery_month],
+                input[name=delivery_day] {
+                  padding-left: 8px;
+                  padding-right: 8px;
+                  width: 40px;
+
+                  @include breakpoint(pc2) {
+                    padding-left: vwVal(15,1920);
+                    padding-right: vwVal(15,1920);
+                    width: vwVal(50,1920);
+                  }
+                }
+              }
+            }
+          }
+
+          &__btn {
+            & > div {
+              border-radius: 8px;
+              margin: 22px auto 0;
+              position: relative;
+              width: 250px;
+
+              @include breakpoint(pc2) {
+                border-radius: vwVal(10,1920);
+                margin: vwVal(22,1920) auto 0;
+                width: vwVal(400,1920);
+              }
+
+              svg {
+                height: auto;
+                pointer-events: none;
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 20px;
+
+                @include breakpoint(pc2) {
+                  right: vwVal(40,1920);
+                  width: vwVal(24,1920);
+                }
+
+                path {
+                  transition: 0.3s ease-in-out;
+                }
+              }
+
+              input {
+                align-items: center;
+                border-radius: 8px;
+                box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.16);
+                color: #fff;
+                cursor: pointer;
+                display: flex;
+                font-size: 16px;
+                justify-content: center;
+                letter-spacing: 0.03em;
+                line-height: calculate_lh(18,32);
+                padding: 12px 10px;
+                position: relative;
+                transition: 0.3s ease-in-out;
+                width: 100%;
+
+                @include breakpoint(pc2) {
+                  border-radius: vwVal(10,1920);
+                  box-shadow: 1px 1px vwVal(10,1920) rgba(0, 0, 0, 0.16);
+                  font-size: vwVal(18,1920);
+                  padding: vwVal(23,1920) vwVal(20,1920);
+                }
+
+                &:hover {
+                  background-color: #fff;
+                  opacity: 1 !important;
+                }
+              }
+
+              &.back {
+                input {
+                  background-color: #8A8D85;
+                  border-color: #8A8D85;
+
+                  &:hover {
+                    background-color: #fff;
+                    color: #8A8D85;
+                    opacity: 1 !important;
+                  }
+                }
+
+                &:hover {
+                  svg {
+                    path {
+                      fill: #8A8D85;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &_input {
+            .mw_wp_form__btn {
+              .back {
+                display: none;
+              }
+            }
+          }
+
+          h3 {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: calculate_lh(22,31);
+            margin: 35px 0 20px;
+
+            @include breakpoint(pc2) {
+              font-size: vwVal(22,1920);
+              margin: vwVal(71,1920) 0 vwVal(40,1920);
+            }
+          }
+
+          .privacy-policy {
+            & > div {
+              font-size: 13px;
+              letter-spacing: 0.03em;
+              line-height: calculate_lh(13,18);
+              margin-top: 40px;
+              text-align: center;
+      
+              @include breakpoint(pc2) {
+                font-size: vwVal(13,1920);
+                margin-top: vwVal(80,1920);
+              }
+      
+              label {
+                padding-left: 35px;
+                position: relative;
+      
+                @include breakpoint(pc2) {
+                  padding-left: vwVal(35,1920);
+                }
+      
+                &::before,
+                &::after {
+                  content: '';
+                  position: absolute;
+                  top: 50%;
+                  transform: translateY(-50%);
+                }
+      
+                &::before {
+                  background-color: #fff;
+                  height: 20px;
+                  left: 0;
+                  width: 20px;
+      
+                  @include breakpoint(pc2) {
+                    height: vwVal(20,1920);
+                    width: vwVal(20,1920);
+                  }
+                }
+      
+                &::after {
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  height: 10px;
+                  left: 4px;
+                  opacity: 0;
+                  transition: 0.3s ease-in-out;
+                  width: 14px;
+      
+                  @include breakpoint(pc2) {
+                    height: vwVal(10,1920);
+                    left: vwVal(4,1920);
+                    width: vwVal(14,1920);
+                  }
+                }
+      
+                &:has(:checked)::after {
+                  opacity: 1;
+                }
+      
+                input[type="checkbox"] {
+                  display: none;
+                }
+
+                a {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+
+          &_confirm {
+            .mw_wp_form {
+              &__item {
+                .input-field {
+                  line-height: calculate_lh(14,37);
+
+                  @include breakpoint(pc2) {
+                    line-height: calculate_lh(15,50);
+                  }
+                }
+
+                &.name,
+                &.kana  {
+                  .input-field {
+                    & > div {
+                      display: block;
+                    }
+                  }
+                }
+
+                &.mail {
+                  .input-field {
+                    & > div {
+                      &:nth-of-type(1) {
+                        display: none;
+                      }
+                    }
+                  }
+                }
+
+                &.tel {
+                  p {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &--01 {
+          .secTtl02 {
+            color: #6DB75A;
+          }
+
+          .mw_wp_form {
+            background-color: #F5FFEF;
+
+            &__item {
+              .head {
+                background-color: #6DB75A;
+              }
+
+              .input-field {
+                input[type=text],
+                input[type=email],
+                textarea {
+                  border-color:#259424;
+                }
+              }
+            }
+
+            &__btn {
+              & > div {
+                &:hover {
+                  svg {
+                    path {
+                      fill: #6DB75A;
+                    }
+                  }
+                }
+  
+                input {
+                  background-color: #6DB75A;
+                  border: 1px solid #6DB75A;
+  
+                  &:hover {
+                    color: #6DB75A;
+                  }
+                }
+              }
+            }
+
+            .privacy-policy {
+              & > div {
+                label {
+                  &::before {
+                    border: 1px solid #259424;
+                  }
+
+                  &::after {
+                    background-image: url('./images/contact/check_icon_green.svg');
+                  }
+
+                  a {
+                    color: #259424;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &--02 {
+          .secTtl02 {
+            color: #137ED5;
+          }
+
+          .mw_wp_form {
+            background-color: #EFFCFF;
+
+            &__item {
+              .head {
+                background-color: #137ED5;
+              }
+
+              .input-field {
+                input[type=text],
+                input[type=email],
+                textarea {
+                  border-color:#0C75CB;
+                }
+              }
+            }
+
+            &__btn {
+              & > div {
+                &:hover {
+                  svg {
+                    path {
+                      fill: #137ED5;
+                    }
+                  }
+                }
+  
+                input {
+                  background-color: #137ED5;
+                  border: 1px solid #137ED5;
+  
+                  &:hover {
+                    color: #137ED5;
+                  }
+                }
+              }
+            }
+
+            .privacy-policy {
+              & > div {
+                label {
+                  &::before {
+                    border: 1px solid #0C75CB;
+                  }
+
+                  &::after {
+                    background-image: url('./images/contact/check_icon_blue.svg');
+                  }
+
+                  a {
+                    color: #137ED5;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .telSec {
+    padding-top: 0;
+
+    .secTtl02 {
+      color: #F4CB02;
+    }
+
+    .box {
+      background-color: #FFFDE8;
+      margin: 20px auto 0;
+      padding: 30px 25px;
+      text-align: center;
+
+      @include breakpoint(pc2) {
+        margin: vwVal(40,1920) auto 0;
+        padding: vwVal(50,1920) 0;
+        width: vwVal(1000,1920);
+      }
+
+      .troubleTxt {
+        height: auto;
+        max-width: 250px;
+        width: 100%;
+
+        @include breakpoint(pc2) {
+          max-width: none;
+          width: vwVal(300.56,1920);
+        }
+      }
+
+      .wrap {
+        margin: 10px auto 0;
+        width: fit-content;
+
+        @include breakpoint(pc2) {
+          margin: vwVal(10,1920) auto 0;
+        }
+
+        a {
+          align-items: center;
+          display: flex;
+          margin: 0 auto;
+          width: fit-content;
+
+          svg {
+            height: auto;
+            width: 30px;
+
+            @include breakpoint(pc2) {
+              width: vwVal(66,1920);
+            }
+          }
+
+          span {
+            font-family: $ubuntu;
+            font-size: 32px;
+            letter-spacing: 0.02em;
+            line-height: calculate_lh(60,67);
+            margin-left: 10px;
+
+            @include breakpoint(pc2) {
+              font-size: vwVal(60,1920);
+              margin-left: vwVal(19,1920);
+            }
+          }
+        }
+
+        p {
+          background-color: #F4CB02;
+          border-radius: 100vw;
+          color: #fff;
+          font-size: 14px;
+          font-weight: 500;
+          letter-spacing: 0.08em;
+          line-height: calculate_lh(18,25);
+          margin-top: 10px;
+          padding: 4px 5px;
+
+          @include breakpoint(pc2) {
+            font-size: vwVal(18,1920);
+            margin-top: vwVal(10,1920);
+            padding: vwVal(8,1920) vwVal(7,1920);
+          }
+        }
+      }
+    }
+  }
+}

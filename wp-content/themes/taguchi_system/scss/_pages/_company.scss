@@ -1,0 +1,27 @@
+/*******************************************************
+*
+* COMPANY
+*
+*******************************************************/
+.page-company {
+  .companySec {
+    padding-top: 0;
+    
+    .list01 {
+      &__item {
+        border-bottom: 1px dashed $color-black;
+        display: flex;
+        padding: 2em 0;
+
+        label {
+          font-weight: 500;
+          width: 30%;
+        }
+      }
+
+      &__right {
+        width: 70%;
+      }
+    }
+  }
+}

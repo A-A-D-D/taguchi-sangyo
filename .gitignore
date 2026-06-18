@@ -1,2 +1,4 @@
 node_modules/
 exports/
+wp-content/plugins/*
+!wp-content/plugins/plugins.md

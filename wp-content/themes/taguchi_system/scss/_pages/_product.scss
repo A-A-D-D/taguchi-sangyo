@@ -1,0 +1,192 @@
+/*******************************************************
+*
+* PRODUCT
+*
+*******************************************************/
+.single-product {
+  .productSec {
+    padding-top: 0;
+
+    .row {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include breakpoint(pc2) {
+        flex-direction: row;
+      }
+
+      .left {
+        @include breakpoint(pc2) {
+          width: vwVal(550,1920);
+        }
+
+        .product_title {
+          font-size: 20px;
+          font-weight: 500;
+          margin-bottom: 15px;
+
+          @include breakpoint(pc2) {
+            display: none;
+          }
+        }
+
+        .woocommerce-product-gallery__image {
+          border: 1px solid #707070;
+        }
+
+        .tabs {
+          margin-top: 30px;
+
+          @include breakpoint(pc2) {
+            margin-top: vwVal(50,1920);
+          }
+
+          .tab {
+            &__head {
+              border-bottom: 1px solid #909090;
+              display: flex;
+              gap: 20px;
+              justify-content: center;
+
+              @include breakpoint(pc2) {
+                gap: vwVal(20,1920);
+              }
+
+              input[name=tab_switch] {
+                display: none;
+
+                &:checked + .tab__label {
+                  &::after {
+                    background-color: $color-orange;
+                    content: '';
+                    display: block;
+                    height: 2px;
+                    left: 0;
+                    position: absolute;
+                    top: 100%;
+                    transform: translateY(-25%);
+                    width: 100%;
+                  }
+                }
+              }
+            }
+
+            &__label {
+              cursor: pointer;
+              padding-bottom: 5px;
+              position: relative;
+              text-align: center;
+              width: 130px;
+
+              @include breakpoint(pc2) {
+                padding-bottom: vwVal(10,1920);
+                width: vwVal(180,1920);
+              }
+            }
+
+            &__content {
+              display: none;
+              padding: 10px 5px 0;
+
+              @include breakpoint(pc2) {
+                padding: vwVal(10,1920) vwVal(5,1920) 0;
+              }
+
+              &#tab01__content {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+
+      .right {
+        margin-top: 30px;
+        
+        @include breakpoint(pc2) {
+          margin-top: 0;
+          width: vwVal(550,1920);
+        }
+
+        .product_title {
+          display: none;
+          font-size: vwVal(30,1920);
+          font-weight: 500;
+          margin-bottom: vwVal(20,1920);
+
+          @include breakpoint(pc2) {
+            display: block;
+          }
+        }
+
+        .price {
+          display: inline;
+          
+          .woocommerce-Price-currencySymbol {
+            font-size: calc(30 / 40 * 1em);
+          }
+          
+          &__wrap {
+            font-size: 25px;
+            margin-bottom: 15px;
+            
+            @include breakpoint(pc2) {
+              border-bottom: 1px solid #707070;
+              font-size: vwVal(40,1920);
+              padding-bottom: vwVal(30,1920);
+              margin-bottom: vwVal(30,1920);
+            }
+            
+            .taxin {
+              font-size: calc(18 / 40 * 1em);
+            }
+          }
+        }
+
+        .cart {
+          margin-bottom: 15px;
+
+          @include breakpoint(pc2) {
+            margin-bottom: vwVal(20,1920);
+          }
+
+          .quantity {
+            margin-bottom: 30px;
+
+            @include breakpoint(pc2) {
+              margin-bottom: vwVal(100,1920);
+            }
+          }
+
+          .single_add_to_cart_button {
+            background-color: $color-green;
+            border-radius: 0;
+            display: block;
+            font-family: inherit;
+            font-weight: 400;
+            line-height: calc(24 / 16);
+            margin: 0 auto;
+            padding: 15px 0;
+            transition: 0.3s ease-in-out;
+            width: 100%;
+
+            @include breakpoint(pc2) {
+              padding: vwVal(23,1920) 0;
+              width: vwVal(430,1920);
+            }
+
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+
+        .btn {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

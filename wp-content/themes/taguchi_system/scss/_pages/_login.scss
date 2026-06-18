@@ -1,0 +1,125 @@
+/*******************************************************
+*
+* LOGIN
+*
+*******************************************************/
+.page-login {
+  .loginSec {
+    .form__wrap {
+      margin: 0 auto;
+      
+      @include breakpoint(pc2) {
+        width: vwVal(600,1920);
+      }
+
+      #wpmem_login {
+        legend {
+          display: none;
+        }
+
+        label {
+          &[for=log] {
+            display: none;
+          }
+
+          &[for=pwd] {
+            display: none;
+          }
+
+          &[for=rememberme] {
+            display: none;
+          }
+        }
+
+        .div_text {
+          margin-bottom: 20px;
+          width: 100%;
+
+          @include breakpoint(pc2) {
+            margin-bottom: vwVal(30,1920);
+          }
+        }
+
+        input[type=checkbox] {
+          display: none;
+        }
+
+        input[type=text],
+        input[type=password] {
+          border: 1px solid #707070;
+          line-height: 1.5;
+          padding: 9px;
+
+          @include breakpoint(pc2) {
+            padding: vwVal(18,1920);
+          }
+        }
+
+        .button_div {
+          font-size: 0;
+          margin-top: 30px;
+          padding: 0;
+          text-align: center;
+
+          @include breakpoint(pc2) {
+            margin-top: vwVal(60,1920);
+          }
+
+          & > * {
+            display: none;
+          }
+
+          input[type=submit] {
+            background-color: $color-orange;
+            border: 0;
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.16);
+            cursor: pointer;
+            color: #fff;
+            display: inline-block;
+            font-size: 16px;
+            line-height: calc(24 / 16);
+            padding: 12px 0;
+            transition: 0.3s ease-in-out;
+            width: 200px;
+
+            @include breakpoint(pc2) {
+              box-shadow: vwVal(2,1920) vwVal(2,1920) vwVal(6,1920) rgba(0, 0, 0, 0.16);
+              padding: vwVal(23,1920) 0;
+              width: vwVal(300,1920);
+            }
+
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
+
+    .line {
+      background-color: $color-black;
+      height: 1px;
+      margin: 40px auto;
+      
+      @include breakpoint(pc2) {
+        width: vwVal(600,1920);
+      }
+    }
+
+    .registration {
+      text-align: center;
+
+      .txt01 {
+        margin-bottom: 10px;
+  
+        @include breakpoint(pc2) {
+          margin-bottom: vwVal(20,1920);
+        }
+      }
+
+      .btn__layout03 {
+        font-size: 16px;
+      }
+    }
+  }
+}

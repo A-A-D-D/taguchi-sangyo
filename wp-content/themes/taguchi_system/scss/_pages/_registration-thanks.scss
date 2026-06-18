@@ -1,0 +1,16 @@
+/*******************************************************
+*
+* REGISTRATION THANKS
+*
+*******************************************************/
+.page-registration-thanks {
+  .registration-thanksSec {
+    .btn__layout04 {
+      margin-top: 65px;
+
+      @include breakpoint(pc2) {
+        margin-top: vwVal(130,1920);
+      }
+    }
+  }
+}

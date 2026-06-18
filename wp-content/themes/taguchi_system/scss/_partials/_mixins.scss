@@ -1,0 +1,112 @@
+@mixin breakpoint($point) {
+  //Min-width
+  @if $point == sp {
+    @media (min-width: $breakpoint-sp) {
+      @content ;
+    }
+  }
+  @if $point == pc {
+    @media print, (min-width: $breakpoint-pc) {
+      @content ;
+    }
+  }
+  @if $point == pc2 {
+    @media print, (min-width: $breakpoint-pc2) {
+      @content ;
+    }
+  }
+  @if $point == pc3 {
+    @media print, (min-width: $breakpoint-pc3) {
+      @content ;
+    }
+  }
+  @if $point == pc4 {
+    @media print, (min-width: $breakpoint-pc4) {
+      @content ;
+    }
+  }
+  @if $point == pc5 {
+    @media print, (min-width: $breakpoint-pc5) {
+      @content ;
+    }
+  }
+}
+
+@mixin browsers($property, $value, $prefixes) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+  #{$property}: $value;
+}
+
+@mixin pseudo($pos: absolute, $content: '', $width:'', $height:''){
+  content: $content;
+  position: $pos;
+  width: $width;
+  height: $height;
+}
+
+@mixin font($family, $size, $weight) {
+  font-family: $family;
+  @include font-size($size);
+  font-weight: $weight;
+}
+
+@mixin letter-spacing($px, $val) {
+  letter-spacing: ls-px($px, $val);
+}
+
+@mixin transition($val...) {
+  transition: $val;
+}
+
+@mixin background-image($image, $image-retina) {
+  background-image: url($image);
+  background-image: image-set(
+    url($image) 1x,
+    url($image-retina) 2x
+  )
+}
+
+@mixin font-size($size) {
+  font-size: $size * 0.875px;
+
+  @include breakpoint(pc2) {
+    font-size: $size * 1px;
+  }
+}
+
+// * hack IE
+$hack-ie11: "*::-ms-backdrop";
+@mixin hack-ie($hack-ver:'') {
+    // * IE8 hack
+    @if $hack-ver == "ie8" {
+        @media \0screen {
+            @content;
+        }
+    }
+    // * IE9-10 hack(add propary \9)
+    @else if $hack-ver == "ie9-10" {
+        @media all and (min-width:0\0) {
+            @content;
+        }
+    }
+    // * IE10 hack(add propary \9)
+    @else if $hack-ver == "ie10" {
+        @media all and (-ms-high-contrast:none\0) {
+            @content;
+        }
+    }
+    // * IE11 hack(add selector *::-ms-backdrop)
+    @else if $hack-ver == "ie11" {
+        @media all and (-ms-high-contrast:none\0) {
+            @content;
+        }
+    }
+}
+// * hack Edge 12 - 14
+@mixin hack-edge {
+  @supports (-ms-ime-align: auto) and (not (-webkit-text-stroke: initial)) {
+    @content;
+  }
+}

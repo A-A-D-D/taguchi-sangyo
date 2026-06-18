@@ -1,0 +1,45 @@
+/*
+Theme Name: taguchi system
+Theme URL: 
+Author: A&A
+Description: This is the base theme for all the Wordpress projects.
+Version: 1.0
+*/
+
+@import "_partials/functions";
+@import "_partials/mixins";
+@import "_partials/variables";
+
+@import "base";
+@import "_modules/header";
+@import "_modules/footer";
+@import "_modules/page";
+
+@import "_pages/home-page";
+@import "_pages/login";
+@import "_pages/products";
+@import "_pages/product";
+@import "_pages/cart";
+@import "_pages/checkout";
+@import "_pages/manager-edit";
+@import "_pages/regular-order-list";
+@import "_pages/company";
+@import "_pages/law";
+@import "_pages/privacy-policy";
+@import "_pages/registration";
+@import "_pages/registration-thanks";
+@import "_pages/profile-edit";
+@import "_pages/site";
+@import "_pages/site-add";
+@import "_pages/purchase-order";
+
+
+
+
+//@import "_pages/page404";
+//@import "_pages/about";
+//@import "_pages/strength";
+//@import "_pages/flow";
+//@import "_pages/faq";
+//@import "_pages/company";
+//@import "_pages/contact";

@@ -1,0 +1,168 @@
+/*******************************************************
+*
+* FLOW
+*
+*******************************************************/
+.page-flow {
+  .flowSec {
+    .list {
+      .item {
+        .inner {
+          background-color: #F5FFEF;
+          border: 3px solid #259424;
+          border-radius: 15px;
+          display: flex;
+          flex-direction: column-reverse;
+          padding: 15px 10px 20px;
+          
+          @include breakpoint(pc2) {
+            align-items: center;
+            border-radius: vwVal(40,1920);
+            flex-direction: row;
+            padding: vwVal(40,1920) vwVal(67,1920) vwVal(40,1920) vwVal(50,1920);
+          }
+        }
+
+        &__img {
+          margin: 25px auto 0;
+          max-width: 500px;
+          width: 100%;
+          
+          @include breakpoint(pc2) {
+            margin: 0 vwVal(40,1920) 0 0;
+            max-width: none;
+            width: vwVal(298,1920);
+          }
+        }
+
+        &__cont {
+          flex: 1;
+
+          .btn01 {
+            margin: 20px auto 0;
+            max-width: 300px;
+            width: 100%;
+
+            @include breakpoint(pc2) {
+              margin: vwVal(40,1920) auto 0;
+              max-width: none;
+              width: vwVal(400,1920);
+            }
+          }
+        }
+
+        &__ttl {
+          align-items: center;
+          color: #137ED5;
+          display: flex;
+          line-height: calculate_lh(36,41);
+
+          .step {
+            font-family: $ubuntu;
+            font-size: 19px;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            margin-right: 2px;
+
+            @include breakpoint(pc2) {
+              font-size: vwVal(22,1920);
+              margin-right: vwVal(4,1920);
+            }
+          }
+
+          .num {
+            color: #fff;
+            font-family: $ubuntu;
+            font-size: 30px;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            margin-right: 9px;
+
+            @include breakpoint(pc2) {
+              font-size: vwVal(36,1920);
+              margin-right: vwVal(18,1920);
+            }
+
+            &--back {
+              -webkit-text-stroke: 3px #137ED5;
+            }
+
+            &--front {
+              left: 0;
+              top: 0;
+            }
+          }
+
+          .txt {
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            padding-top: 4px;
+
+            @include breakpoint(pc2) {
+              font-size: vwVal(20,1920);
+              padding-top: vwVal(3,1920);
+            }
+          }
+        }
+
+        &__txt {
+          letter-spacing: 0.09em;
+          line-height: 1.75;
+          margin-top: 10px;
+          
+          @include breakpoint(pc2) {
+            line-height: 2;
+            margin-top: vwVal(20,1920);
+          }
+
+          .red {
+            color: #ED0000;
+          }
+
+          .tel {
+            font-weight: 500;
+          }
+        }
+
+        &:not(:last-of-type) {
+          padding-bottom: 40px;
+
+          @include breakpoint(pc2) {
+            padding-bottom: vwVal(70,1920);
+          }
+
+          &::before,
+          &::after {
+            background-color: #137ED5;
+            border-radius: 100vw;
+            bottom: 0;
+            content: '';
+            left: 50%;
+            position: absolute;
+            width: 2px;
+          }
+
+          &::before {
+            height: 40px;
+            transform: translateX(-50%);
+
+            @include breakpoint(pc2) {
+              height: vwVal(70,1920);
+            }
+          }
+
+          &::after {
+            height: 18px;
+            transform: translateX(-50%) rotate(40deg);
+            transform-origin: left bottom;
+
+            @include breakpoint(pc2) {
+              height: vwVal(25,1920);
+            }
+          }
+        }
+      }
+    }
+  }
+}

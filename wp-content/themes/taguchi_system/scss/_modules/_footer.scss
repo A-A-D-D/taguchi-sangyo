@@ -1,0 +1,46 @@
+/*******************************************************
+*
+* FOOTER
+*
+*******************************************************/
+.footer {
+  padding: 10px 0;
+
+  @include breakpoint(pc2) {
+    padding: vwVal(30,1920) 0;
+  }
+
+  &__menu {
+    font-size: calc(14 / 16 * 1em);
+    margin-bottom: 1em;
+    padding: 0 vwVal(20,375);
+
+    @include breakpoint(pc2) {
+      padding: 0 vwVal(50,1920);
+    }
+    
+    .list {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      justify-content: flex-end;
+      
+      @include breakpoint(pc2) {
+        flex-direction: row;
+        gap: 1.5em;
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 10px;
+    padding: 0 25px;
+    text-align: center;
+
+    @include breakpoint(pc2) {
+      font-size: vwVal(12,1920);
+      padding: 0 vwVal(50,1920);
+    }
+  }
+}

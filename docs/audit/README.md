@@ -17,14 +17,17 @@
 ## 結論サマリ
 
 - 現リポジトリは、実装アプリケーション本体ではなく、Markdownベースの提案資料、設計資料、スライド、PDF/HTMLエクスポートを中心とした資料リポジトリです。
-- `docs/proposal/08_infrastructure.md` には Laravel Application と MySQL の構成案がありますが、リポジトリ内に Laravel 実装、WordPress 実装、静的サイト本体は確認できませんでした。
+- 差分Auditで `wp-content/themes/taguchi_system` と `wp-content/plugins/*` を確認しました。WordPressテーマ・プラグインファイルは追加済みですが、WordPress本体、DB、有効化状態は未確認です。
+- `docs/proposal/08_infrastructure.md` には Laravel Application と MySQL の構成案がありますが、リポジトリ内に Laravel 実装は確認できませんでした。
+- 最新の優先順位整理では、Proposal v1を将来構想・拡張構想として保持し、MVPはFAX/電話発注のオンライン化に限定します。
+- MVP本体はWebフォーム、メール送信、PDF発注書生成です。PDF自動保存・自動印刷はMVP+1として分離します。
 - `package.json` には Marp / Marpit / Mermaid CLI の開発依存があり、資料生成・図表生成用途と見られます。
 - Git状態では `.DS_Store` と `docs/.DS_Store` が未管理ファイルとして存在します。
 - `.env`、秘密鍵、DBダンプ、ログ、圧縮アーカイブに該当するファイル名は、簡易探索の範囲では確認されませんでした。
 
 ## 分類
 
-現物ベースの分類: その他（ドキュメント・提案資料リポジトリ）
+現物ベースの分類: WordPressテーマ/プラグインファイルとドキュメント・提案資料の同居リポジトリ
 
 資料上の想定: Laravel + MySQL によるWeb業務システム
 

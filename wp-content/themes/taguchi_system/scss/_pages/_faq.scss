@@ -1,0 +1,75 @@
+/*******************************************************
+*
+* FAQ
+*
+*******************************************************/
+.page-faq {
+  .faqSec {
+    .faq {
+      margin-top: 50px;
+
+      @include breakpoint(pc2) {
+        margin-top: vwVal(130,1920);
+      }
+
+      .list {
+        .item {
+          letter-spacing: 0.03em;
+
+          .icon {
+            height: 65px;
+            left: 0;
+            top: 0;
+            width: auto;
+
+            @include breakpoint(pc2) {
+              height: auto;
+              width: vwVal(97.274,1920);
+            }
+          }
+
+          .question {
+            align-items: center;
+            display: flex;
+            font-size: 16px;
+            font-weight: 500;
+            height: 55px;
+            line-height: 1.5;
+            margin-left: 36px;
+
+            @include breakpoint(pc2) {
+              font-size: vwVal(20,1920);
+              height: vwVal(88,1920);
+              line-height: 1.875;
+              margin-left: vwVal(87,1920);
+            }
+          }
+
+          .answer {
+            background-color: #FFFDE8;
+            border-radius: 15px;
+            line-height: 1.75;
+            margin-top: 10px;
+            padding: 8px 10px;
+
+            @include breakpoint(pc2) {
+              border-radius: vwVal(30,1920);
+              line-height: 2;
+              margin-left: vwVal(100,1920);
+              margin-top: vwVal(14,1920);
+              padding: vwVal(47,1920) vwVal(17,1920) vwVal(47,1920) vwVal(30,1920);
+            }
+          }
+
+          & + .item {
+            margin-top: 40px;
+
+            @include breakpoint(pc2) {
+              margin-top: vwVal(100,1920);
+            }
+          }
+        }
+      }
+    }
+  }
+}

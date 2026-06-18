@@ -1,0 +1,110 @@
+/*******************************************************
+*
+* CHECKOUT
+*
+*******************************************************/
+.page-checkout {
+  .checkoutSec {
+    padding-top: 0;
+
+    .woocommerce {
+      form {
+        .col2-set {
+          .col-2 {
+            margin-top: 30px;
+
+            @include breakpoint(pc2) {
+              margin-top: 0;
+            }
+          }
+        }
+
+        .form-row {
+          input {
+            &.input-text {
+              border: 1px solid #707070;
+              line-height: 1.5;
+              padding: 9px;
+
+              @include breakpoint(pc2) {
+                padding: vwVal(18,1920);
+              }
+            }
+
+            &[type=date] {
+              padding: 9px;
+
+              @include breakpoint(pc2) {
+                padding: vwVal(18,1920);
+              }
+            }
+          }
+
+          textarea {
+            border: 1px solid #707070;
+            height: 8em;
+            line-height: 1.5;
+            padding: 9px;
+
+            @include breakpoint(pc2) {
+              padding: vwVal(18,1920);
+            }
+          }
+
+          .optional {
+            display: none;
+          }
+        }
+      }
+
+      #payment {
+        #place_order {
+          background-color: $color-orange;
+          font-family: $notosans;
+          line-height: 1.5;
+          margin-top: 10px;
+          padding: 9px;
+          transition: 0.3s ease-in-out;
+          width: 150px;
+
+          @include breakpoint(pc2) {
+            margin-top: vwVal(20,1920);
+            padding: vwVal(18,1920);
+            width: vwVal(200,1920);
+          }
+
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+
+    .select2-container--default {
+      .select2-selection--single {
+        border: 1px solid #707070;
+        border-radius: 0;
+        height: auto;
+
+        .select2-selection__rendered {
+          line-height: 1.5;
+          padding: 9px;
+
+          @include breakpoint(pc2) {
+            padding: vwVal(18,1920);
+          }
+        }
+
+        .select2-selection__arrow {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        .select2-selection__clear {
+          display: none;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,235 @@
+/*******************************************************
+*
+* PRICE
+*
+*******************************************************/
+.page-price {
+  .priceSec {
+    padding: 60px 0 0;
+
+    @include breakpoint(pc2) {
+      padding: vwVal(60,1920) 0 0;
+    }
+
+    .table {
+      color: #585858;
+      display: flex;
+      flex-wrap: wrap;
+      font-family: $notosans;
+      letter-spacing: 0.02em;
+      line-height: calculate_lh(16,28);
+
+      .col {
+        width: 100%;
+
+        @include breakpoint(pc) {
+          width: 50%;
+        }
+
+        @include breakpoint(pc2) {
+          width: 21%;
+        }
+
+        @include breakpoint(pc3) {
+          width: 20%;
+        }
+
+        .row {
+          align-items: center;
+          border-bottom: 1px dashed #707070;
+          border-left: 1px dashed #707070;
+          border-right: 1px dashed #707070;
+          display: flex;
+          flex-direction: column;
+          height: 85px;
+          justify-content: center;
+
+          @include breakpoint(pc) {
+            border-left: 0;
+          }
+
+          @include breakpoint(pc2) {
+            height: vwVal(80,1920);
+          }
+
+          p {
+            text-align: center;
+          }
+
+          &01 {
+            border-top: 1px dashed #707070;
+          }
+
+          .circle {
+            aspect-ratio: 1 / 1;
+            border: 1px solid #707070;
+            border-radius: 100vw;
+            width: 18px;
+
+            @include breakpoint(pc2) {
+              border: 2px solid #707070;
+              width: vwVal(18,1920);
+            }
+          }
+
+          .line {
+            background-color: #707070;
+            height: 2px;
+            width: 18px;
+
+            @include breakpoint(pc2) {
+              width: vwVal(18,1920);
+            }
+          }
+
+          .label--sp {
+            font-size: 14px;
+            margin-bottom: 5px;
+
+            @include breakpoint(pc2) {
+              display: none;
+            }
+          }
+        }
+
+        &01 {
+          display: none;
+          width: 16%;
+
+          @include breakpoint(pc2) {
+            display: block;
+          }
+
+          @include breakpoint(pc3) {
+            width: 20%;
+          }
+
+          .row {
+            border-left: 1px dashed #707070;
+          }
+        }
+
+        &:nth-of-type(3) {
+          margin-top: 30px;
+
+          @include breakpoint(pc) {
+            margin-top: 0;
+          }
+        }
+
+        &:nth-of-type(n+2) {
+          .row {
+            &02 {
+              font-family: $bizudpgo;
+              font-size: 16px;
+
+              @include breakpoint(pc2) {
+                font-size: vwVal(18,1920);
+              }
+            }
+
+            &:nth-of-type(even) {
+              background-color: #EAEAEA;
+            }
+          }
+        }
+
+        &:nth-of-type(n+4) {
+          margin-top: 30px;
+
+          @include breakpoint(pc2) {
+            margin-top: 0;
+          }
+        }
+
+        &:nth-of-type(even) {
+          .row {
+            border-left: 1px dashed #707070;
+
+            @include breakpoint(pc2) {
+              border-left: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .taxTxt {
+      color: #585858;
+      font-family: $notosans;
+      margin-top: 10px;
+      text-align: right;
+
+      @include breakpoint(pc2) {
+        margin-top: vwVal(10,1920);
+      }
+    }
+
+    .txt-img {
+      color: #585858;
+      margin-top: 30px;
+
+      @include breakpoint(pc2) {
+        display: flex;
+        margin-top: vwVal(15,1920);
+      }
+
+      .txt__wrap {
+        font-family: $notosans;
+        font-size: 15px;
+        line-height: calculate_lh(17,33);
+        width: 100%;
+
+        @include breakpoint(pc2) {
+          font-size: vwVal(17,1920);
+          padding-top: vwVal(23,1920);
+          width: 50%;
+        }
+
+        ul {
+          li {
+            padding-left: 1em;
+            position: relative;
+
+            &::before {
+              content: '・';
+              left: 0;
+              position: absolute;
+            }
+          }
+        }
+      }
+
+      .img__wrap {
+        margin: 30px auto 0;
+        max-width: 350px;
+        width: 100%;
+
+        @include breakpoint(pc2) {
+          margin: 0;
+          max-width: none;
+          padding-left: vwVal(36,1920);
+          width: 50%;
+        }
+
+        img {
+          @include breakpoint(pc2) {
+            height: vwVal(295,1920);
+            width: vwVal(392,1920);
+          }
+        }
+      }
+    }
+  }
+
+  .bottomImg {
+    @include breakpoint(pc2) {
+      margin-top: vwVal(-54,1920);
+    }
+
+    img {
+      position: relative;
+      z-index: -1;
+    }
+  }
+}
