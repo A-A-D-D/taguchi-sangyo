@@ -1,0 +1,35 @@
+# rsync 除外パターン
+# scripts/deploy-xserver.sh から --exclude-from で参照される
+# リポジトリルートからの相対パスで記述
+
+# Git 管理ファイル
+.git/
+.github/
+.gitignore
+
+# 開発・ドキュメント（公開不要）
+docs/
+slides/
+scripts/
+README.md
+*.code-workspace
+package.json
+package-lock.json
+node_modules/
+
+# macOS アーティファクト
+.DS_Store
+.crossnote/
+
+# バックアップファイル
+*.bak-*
+
+# WordPress: サーバー側管理ファイル
+wp-config.php
+.htaccess
+
+# WordPress: アップロード（絶対に rsync しない）
+wp-content/uploads/
+
+# WordPress: プラグイン本体（plugins.md のみ Git 管理）
+wp-content/plugins/
