@@ -1,4 +1,17 @@
 node_modules/
 exports/
+
+# macOS
+.DS_Store
+
+# WordPress: サーバー側管理（Git に含めない）
+wp-config.php
+.htaccess
+wp-content/uploads/
+
+# WordPress: プラグイン本体（plugins.md のみ管理）
 wp-content/plugins/*
 !wp-content/plugins/plugins.md
+
+# バックアップファイル
+wp-content/themes/taguchi_system/*.bak-*.crossnote/

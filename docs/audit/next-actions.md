@@ -81,6 +81,12 @@
    - 既存proposalは将来構想・拡張ロードマップとして保持し、MVPの見積・WBSとは分けて扱ってください。
    - `docs/proposal/10_estimate.md` の旧MVP概算は、最新MVPの見積として使わないでください。
 
+17. GitHub organization移行後の参照を確認する
+   - GitHub正式slugは `A-A-D-D/taguchi-sangyo` です。
+   - `git remote -v` は `git@github.com:A-A-D-D/taguchi-sangyo.git` を指していることを確認済みです。
+   - README、docs、設定ファイル内で修正が必要な旧organization/旧slug参照は現時点では確認されていません。
+   - deploy、GitHub Actions、orchestrate設定が別途存在する場合は、実変更せず参照先だけ確認してください。
+
 ## 現時点で変更すべきでないもの
 
 今回のAudit目的では、以下は変更しない方針が妥当です。
@@ -116,12 +122,14 @@
 | 実装リポジトリが別にある | 実装リポジトリのAudit、本資料との整合性確認、差分課題化 |
 | WordPressとして進める | テーマ依存関係整理、プラグイン有効化計画、EC保留範囲明文化、検証環境での表示確認 |
 | 最新MVPとして進める | フォーム項目確定、メール/PDF仕様確定、保存方式決定、MVP+1の自動印刷可否判断 |
+| GitHub移行後確認 | `A-A-D-D/taguchi-sangyo` への参照統一は確認済み。deploy/orchestrate設定がある場合は別途確認 |
 
 ## 未確認事項
 
 - 実装リポジトリの有無
 - 本番/検証環境の有無
 - デプロイ方法
+- deploy/orchestrate設定内のGitHub参照
 - DBスキーマの実体
 - 環境変数の実体と管理方法
 - 資料生成コマンド

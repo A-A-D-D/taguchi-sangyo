@@ -7,6 +7,7 @@
 - リポジトリ: `/Users/agent/Documents/dev/taguchi-sangyo`
 - ブランチ: `main`
 - リモート追跡: `origin/main`
+- GitHub正式slug: `A-A-D-D/taguchi-sangyo`
 
 ## リポジトリ構成
 
@@ -205,31 +206,54 @@ MVP+1は、FAX運用に近い受け取り体験を維持するための追加案
 |---|---|
 | README | `README.md` は存在するが0バイト |
 | docs | `docs/` 配下に提案・設計資料あり |
-| deploy関連 | deploy名のファイル、CI/CD設定は未確認 |
+| deploy関連 | deploy名のファイル、CI/CD設定は未確認。GitHub organization移行後のdeploy/orchestrate設定は別途確認が必要 |
 | 環境変数サンプル | `.env.example` 等は未確認 |
 | Docker設定 | `Dockerfile` / `docker-compose.*` は未確認 |
 | DB設定 | 実装用DB設定ファイルは未確認 |
+
+## GitHub Organization移行
+
+確認日: 2026-06-18
+
+GitHub organizationは `A-A-D-D` に移行済みとして確認しました。
+
+正式slug:
+
+- `A-A-D-D/taguchi-sangyo`
+
+`git remote -v` の確認結果:
+
+```text
+origin	git@github.com:A-A-D-D/taguchi-sangyo.git (fetch)
+origin	git@github.com:A-A-D-D/taguchi-sangyo.git (push)
+```
+
+README、docs、設定ファイルを確認した範囲では、旧organization/旧slugとして修正が必要な `*/taguchi-sangyo` 形式のGitHubリポジトリ参照は確認できませんでした。
+
+deploy設定、GitHub Actions設定、orchestrate設定に該当する現物ファイルは確認できていません。存在する場合は、実変更せず、参照先が `A-A-D-D/taguchi-sangyo` と整合しているか確認が必要です。
 
 ## Git状態
 
 確認時点の状態:
 
 ```text
-## main...origin/main [ahead 1]
+## main...origin/main [ahead 2]
 ?? .DS_Store
-?? docs/.DS_Store
-?? docs/pre-project/
-?? wp-content/
+?? .crossnote/config.js
+?? .crossnote/head.html
+?? .crossnote/parser.js
+?? wp-content/.DS_Store
 ```
 
 未管理ファイル:
 
 - `.DS_Store`
-- `docs/.DS_Store`
-- `docs/pre-project/`
-- `wp-content/`
+- `.crossnote/config.js`
+- `.crossnote/head.html`
+- `.crossnote/parser.js`
+- `wp-content/.DS_Store`
 
-差分Audit確認時点では、`main` は `origin/main` より1コミット進んでいます。`wp-content/` は未追跡として確認しました。
+GitHub organization移行確認時点では、`main` は `origin/main` より2コミット進んでいます。
 
 ## 既存設定上の注意
 
