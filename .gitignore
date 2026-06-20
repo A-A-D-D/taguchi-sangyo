@@ -14,4 +14,6 @@ wp-content/plugins/*
 !wp-content/plugins/plugins.md
 
 # バックアップファイル
-wp-content/themes/taguchi_system/*.bak-*.crossnote/
+wp-content/themes/taguchi_system/*.bak-*
+.crossnote/
+
