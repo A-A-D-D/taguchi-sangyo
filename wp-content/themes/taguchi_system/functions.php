@@ -1197,6 +1197,11 @@ function manager_only_page() {
 }
 
 function restrict_access() {
+    // 管理者はフロントエンドのアクセス制限を適用しない
+    if (current_user_can('administrator')) {
+        return;
+    }
+
     $allowed_slugs = [];
     $redirect_page = '/login/';
     if(is_user_logged_in()) {
@@ -1212,7 +1217,7 @@ function restrict_access() {
                 'law',
             ];
             $redirect_page = '/manager/';
-        } else if(current_user_can('subscriber')) {
+        } elseif(current_user_can('subscriber')) {
         //購読者
             $allowed_slugs = [
                 'products',
@@ -1228,6 +1233,15 @@ function restrict_access() {
                 'purchase-order',
             ];
             $redirect_page = '/';
+        } else {
+        // customer 等、未定義ロール → ループ防止のため最低限のページを許可
+            $allowed_slugs = [
+                'login',
+                'company',
+                'privacy-policy',
+                'law',
+            ];
+            $redirect_page = '/login/';
         }
     } else {
     //未ログイン
